@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "../../../../../IoT"
+		},
+		{
+			"name": "ESP32-Iann",
+			"path": "../../ESP32-Iann"
+		},
+		{
+			"name": "ti",
+			"path": ".."
+		}
+	],
+	"settings": {}
+}
