@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/* 
+    Variáveis de cores e fontes.
+    Para utilizar, basta usar a sintaxe var(--nome-da-variavel).
+    Exemplo: var(--color-primary).
+*/
+
+:root {
+    --font-base: "Inter", sans-serif;
+    --font-titulo: "Anton", sans-serif;
+    --color-primary: #E63946;
+    --color-primary-dark: #C1272D;
+    --color-accent: #F4A300;
+    --color-dark: #201A17;
+    --color-light: #FFF7ED;
+    --color-gray: #6B7280;
+    --radius: 14px;
+}
+
+* {
+    margin: 0;
+    /* Remove a margem padrão de todos os elementos */
+    padding: 0;
+    /* Remove o padding padrão de todos os elementos */
+    box-sizing: border-box;
+    /* Define o box-sizing para border-box, o que significa que o padding e a borda serão incluídos na largura e altura do elemento */
+}
+
+/* 
+    Para puxar a Tag, incluir apenas o nome da tag, sem o ponto ou o #, Exemplo: body, h1, p, div, etc.
+    Para puxar uma classe, incluir o ponto antes do nome da classe, Exemplo: .nome-da-classe
+    Para puxar um id, incluir o # antes do nome do id, Exemplo: #nome-do-id
+*/
+
+body {
+    font-family: var(--font-base);
+    /* Define a fonte base do corpo do documento */
+    color: var(--color-dark);
+    /* Define a cor do texto do corpo do documento */
+    line-height: 1.6;
+    /* Define a altura da linha do texto do corpo do documento */
+}
+
+/* Define o estilo do corpo do documento, incluindo a fonte, cor e altura da linha */
+
+h1, h2, h3 {
+    font-family: var(--font-titulo);
+    /* Define a fonte do título do documento */
+    font-weight: 400;
+    /* Define o peso da fonte do título do documento */
+    letter-spacing: -0.5px;
+    /* Define a altura da linha do texto do título do documento */
+}
+
+/* Define o estilo dos títulos do documento, incluindo a fonte, cor e altura da linha */
+
+a {
+    text-decoration: none;
+    /* Remove a decoração de link padrão */
+    color: inherit;
+    /* Herda a cor do elemento pai */
+}
+
+/* Define o estilo dos links do documento, incluindo a decoração e cor */
+
+ul {
+    list-style: none;
+    /* Remove a marcação de lista padrão */
+}
+
+/* Define o estilo das listas do documento, incluindo a marcação de lista */
+
+img {
+    max-width: 100%;
+    /* Define a largura máxima da imagem como 100% do elemento pai */
+    display: block;
+    /* Define a exibição da imagem como bloco */
+}
+
+/* Define o estilo das imagens do documento, incluindo a largura máxima */
+
+.botao {
+    display: inline-block;
+    /* Define a exibição do botão como bloco em linha */
+    padding: 14px 28px;
+    /* Define o padding do botão */
+    border: none;
+    /* Remove a borda do botão */
+    border-radius: 999px;
+    /* Define o raio da borda do botão */
+    font-family: var(--font-base);
+    /* Define a fonte do botão */
+    font-weight: 600;
+    /* Define o peso da fonte do botão */
+    text-align: center;
+    /* Define o alinhamento do texto do botão */
+    cursor: pointer;
+    /* Define o cursor do botão como pointer (maozinha) */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    /* Adiciona uma transição suave para a propriedade transform e box-shadow */
+}
+
+/* Define o estilo dos botões do documento, incluindo a exibição, padding, borda, raio da borda, fonte, peso da fonte, alinhamento do texto e cursor */
+
+.botao:hover{
+    transform: translateY(-2px);
+    /* Adiciona uma animação de translação para cima quando o botão é hover */
+    opacity: 0.9;
+    /* Adiciona uma animação de opacidade quando o botão é hover */
+}
+
+/* Define o estilo dos botões do documento quando o mouse está sobre eles, incluindo a animação de translação para cima e opacidade */
+
+.botao-nav {
+    background: var(--color-primary);
+    /* Define a cor de fundo do botão de navegação */
+    color: var(--color-light);
+    /* Define a cor do texto do botão de navegação */
+    padding: 10px 22px;
+    /* Define o padding do botão de navegação */
+}
+
+/* Define o estilo dos botões de navegação do documento, incluindo a cor de fundo e a cor do texto */
+
+.cabecalho-site {
+    background-color: var(--color-dark);
+    /* Define a cor de fundo do cabeçalho do site */
+    position: sticky;
+    /* Define a posição do cabeçalho do site como sticky (fixo no topo da página) */
+    top: 0;
+    /* Define a posição do cabeçalho que ficará no topo da página */
+    z-index: 10;
+    /* Define o z-index do cabeçalho do site para garantir que ele fique sempre acima de outros elementos */
+}
+
+/* Define o estilo do cabeçalho do site, incluindo a cor de fundo, posição e z-index */
+
+.barra-navegacao {
+    display: flex;
+    /* Define a exibição da barra de navegação como flex */
+    color: var(--color-light);
+    /* Define a cor do texto da barra de navegação */
+    max-width: 1100px;
+    /* Define a largura máxima da barra de navegação */
+    margin: 0 auto;
+    /* Centraliza a barra de navegação horizontalmente */
+    align-items: center;
+    /* Alinha os itens da barra de navegação verticalmente ao centro */
+    justify-content: space-between;
+    /* Distribui o espaço entre os itens da barra de navegação */
+    padding: 18px 24px;
+    /* Define o padding da barra de navegação */
+}
+
+/* Define o estilo da barra de navegação, incluindo a exibição, alinhamento e padding */
+
+.logo {
+    font-family: var(--font-titulo);
+    /* Define a fonte do logo */
+    font-size: 1.4rem;
+    /* Define o tamanho da fonte do logo */
+    letter-spacing: 1px;
+    /* Define o espaçamento entre letras do logo */
+}
+
+/* Define o estilo do logo, incluindo a fonte, tamanho da fonte e espaçamento entre letras */
+
+.menu-links {
+    display: flex;
+    /* Define a exibição do menu de links como flex */
+    gap: 32px;
+    /* Define o espaçamento entre os links do menu */
+}
+
+/* Define o estilo do menu de links, incluindo a exibição e espaçamento entre os links */
+
+.menu-links a {
+    color: #E8D9CD;
+    /* Define a cor do texto dos links do menu */
+    font-weight: 500;
+    /* Define o peso da fonte dos links do menu */
+}
+
+/* Define o estilo dos links do menu, incluindo a cor do texto e peso da fonte */
+
+.menu-links a:hover {
+    color: var(--color-light);
+    /* Define a cor do texto dos links do menu quando o mouse está sobre eles */
+}
+
+.botao-primario {
+    background-color: var(--color-accent);
+    /* Define a cor de fundo do botão primário */
+    color: var(--color-dark);
+    /* Define a cor do texto do botão primário */
+}
+
+.destaque {
+    background: linear-gradient(135deg, var(--color-dark), #3A241A);
+}
+
+.destaque-conteudo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 48px;
+    color: var(--color-light);
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.destaque-texto {
+    flex-grow: 1;
+    flex-basis: 400px;
+}
+
+.destaque h1 {
+    font-size: 3rem;
+    line-height: 1.15;
+    margin-bottom: 20px;
+    color: var(--color-accent);
+}
+
+.destaque p {
+    font-size: 1.15rem;
+    color: #E8D9CD;
+    max-width: 480px;
+    margin-bottom: 32px;
+}
