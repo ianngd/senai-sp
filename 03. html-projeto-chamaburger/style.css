@@ -652,3 +652,71 @@ img {
     align-items: center;
     gap: 8px;
 }
+
+.carrinho-icone{
+    font-size: 1.1rem;
+}
+
+.adicionar-carrinho{
+    display: block;
+    width: 100%;
+    margin-top: 14px;
+    padding: 10px;
+    background: var(--color-dark);
+    color: #FFF;
+    border: none;
+    border-radius:8px;
+    font-family: var(--font-base);
+    font-weight: 600;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition background 0.2s ease;
+}
+
+.reserva-confirmacao {
+    display:none;
+    margin-top: 24px;
+    padding: 18px 20px;
+    background: #E9F7EF;
+    color: #1E7A46;
+    border: var(--radius);
+    font-weight: 500;
+}
+
+.reserva-confirmacao.visivel{
+    display: block;
+}
+
+.foto-previa[hidden]{
+    display:none;
+}
+
+.foto-previa{
+    display: block;
+    margin-top: 12px;
+    max-width: 200px;
+    border-radius: 8px;
+    border: 2px solid #E5DDD3;
+}
+
+
+@media (max-width: 640px){
+    .menu-abrir{
+        display: block;
+    }
+    .menu-links {
+        display: none;
+    }
+    .menu-links,
+    .menu-links-aberto{
+        display: flex;
+        flex-direction: column;
+        position:absolute;
+        top: 100%;
+        left:0;
+        right:0;
+        background: var(--color-dark);
+        padding: 20px 24px;
+        gap: 16px;
+    }
+}
