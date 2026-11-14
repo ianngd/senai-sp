@@ -342,7 +342,7 @@ img {
     width: 100%;
     margin-top: 14px;
     padding: 10px;
-    background: var(--color-dark);
+    background-color: var(--color-primary-dark);
     color: #fff;
     border: none;
     border-radius: 8px;
@@ -376,4 +376,279 @@ img {
     text-transform: uppercase;
     letter-spacing: 1px;
     margin-bottom: 12px;
+}
+
+.sobre-texto h2{
+    font-size: 1.8rem;
+    margin-bottom: 16px;
+}
+
+.sobre-texto p{
+    color: var(--color-gray);
+    margin-bottom: 20px;
+}
+
+.link-seta{
+    color: var(--color-primary);
+    font-weight: 600;
+}
+
+.link-seta:hover{
+    text-decoration: underline;
+}
+
+.sobre-imagem{
+    flex-grow: 1;
+    flex-basis: 400px;
+}
+
+.sobre-imagem img{
+    border-radius: var(--radius);
+    width: 100%;
+    height: auto;
+}
+
+
+.depoimentos{
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 60px 24px;
+    text-align: center;
+}
+
+.depoimentos h2{
+    font-size: 2.2rem;
+    margin-bottom: 48px;
+}
+
+.depoimentos-lista{
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.depoimento{
+    background: var(--color-light);
+    border-radius: var(--radius);
+    padding: 32px;
+    flex-grow: 1;
+    flex-basis: 280px;
+    max-width: 320px;
+    text-align: left;
+}
+
+.avatar{
+    width: 56px;
+    height: 56px;
+    border-radius: 50px;
+    object-fit: cover;
+    margin-bottom: 16px;
+}
+
+.citacao{
+    font-style: italic;
+    color: var(--color-dark);
+    margin-bottom: 16px;
+}
+
+.autor{
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.autor span{
+    font-weight: 400;
+    color:var(--color-gray);
+}
+
+.reserva{
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 60px 24px;
+    text-align: center;
+}
+
+.reserva h2{
+    font-size: 2.2rem;
+    margin-bottom: 12px;
+}
+
+.reserva > p{ /*Simbolo de maior aplica o CSS ao*/
+    color: var(--color-gray);
+    margin-bottom: 32px;
+}
+
+.reserva-formulario{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    text-align: left;
+}
+
+.linha-formulario{
+    flex-grow: 1;
+    flex-basis: 220px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.liha-formulario-completa{
+    flex-grow: 1;
+    flex-basis: 100%;
+}
+
+.linha-formulario label{
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.linha-formulario input,
+.linha-formulario select,
+.linha-formulario textarea{
+    width: 100%;
+    font-family: var(--font-base);
+    font-size: 1rem;
+    padding: 12px 14px;
+    border: 2px solid #E5DDD3;
+    border-radius: 8px;
+    background: #FFF;
+    color: var(--color-dark);
+}
+
+.linha-formulario input:focus,
+.linha-formulario select:focus,
+.linha-formulario textarea:focus{
+    outline: none;
+    border-color: var(--color-primary);
+}
+
+.linha-formulario textarea{
+    resize: none;
+}
+
+.formulario-enviar{
+    flex-grow: 1;
+    flex-basis: 100%;
+    border: none;
+    cursos: pointer;
+    margin-top: 8px;
+}
+
+.botao-destaque{
+    background: #FFF;
+    color: var(--color-primary);
+}
+
+.chamada-final{
+    background: var(--color-primary);
+    text-align: center;
+    padding: 80px 24px;
+    color: #FFF;
+
+}
+
+.chamada-final h2{
+    font-size: 2.2rem;
+    margin-bottom: 12px;
+}
+
+.chamada-final p{
+    margin-bottom: 28px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #FFE3D9;
+}
+
+.rodape-site{
+    background: var(--color-dark);
+    color: #E8D9CD;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 32px 24px 100px;
+}
+
+.rodape-horario{
+    font-size: 0.85rem;
+    color: #A89485;
+    margin-top: 4px;
+}
+
+.rodape-links{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.rodape-links a{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+}
+
+.rodape-links a i{
+    font-size: 18px;
+    color: inherit;
+}
+
+.rodape-links a:hover{
+    color: #FFF;
+
+}
+
+/*Responsividade*/
+@media(max-width: 780px){
+    .sobre, .destaque-conteudo{
+        flex-direction: column;
+    }
+    .destaque-texto, .destaque-imagem, .sobre-texto, .sobre-imagem{
+        width: 100%;
+    }
+}
+
+@media (max-width: 640px){
+    .menu-links{
+        display: none;
+    }
+    .destaque h1{
+        font: 2.2rem;
+    }
+    .rodape-site{
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+.menu-abrir{
+    display: none;
+    background: none;
+    border: none;
+    color: #FFF;
+    font-size: 1.6rem;
+    cursor: pointer;
+    line-height: 1;
+}
+
+
+.carrinho-resumo{
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    background: var(--color-dark);
+    color: #FFF;
+    padding: 14px 22px;
+    border-radius: 999px;
+    box-shadow: 0 8px 20px RGBA (0,0,0,0.25);
+    font-weight: 600;
+    font-size: 0.95rem;
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
